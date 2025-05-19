@@ -1,0 +1,36 @@
+.TodoItem {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+    border-radius: 12px;
+    width: 100vh;
+    min-height: 50px;
+    padding: 10px;
+}
+
+.TodoItem__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.TodoItem__checkbox {
+    cursor: pointer;
+}
+
+.TodoItem__checkbox.active  {
+    color: green;
+}
+
+.EditIcon{
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+.TodoItem__Btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+
+}
