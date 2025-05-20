@@ -1,11 +1,48 @@
 .TodoForm{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
+    height: 25vh;
+    justify-content: center;
+}
+
+.TodoForm label{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: bold;
+    font-size: 20px
 }
 
 .TodoForm input{
-    border: 2px solid;
     border-radius: 8px;
-    padding: 10px 5px;
+    padding: 15px 10px;
+    background: #f2f0f9;
+    border: none;
+}
+.TodoForm input:focus{
+    outline: #5E60D2  2px solid;
+}
+
+.TodoForm__btn{
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.TodoForm__acsBtn{
+    cursor: pointer;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    background: #5E60D2;
+    border: 1px solid #fff;
+}
+
+.TodoForm__acsBtn:hover{
+    color: #5E60D2;
+    background: #fff;
+    border: 1px solid #5E60D2;
+    transition: 0.5s ease;
 }

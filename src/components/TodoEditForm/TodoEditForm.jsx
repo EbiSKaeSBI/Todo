@@ -14,16 +14,23 @@ function TodoEditForm({todo,setVisible}) {
 
     return (
         <form className="TodoForm">
-            <input
-                placeholder='Изменить заголовок'
-                value={updateTodos.title}
-                onChange={e => setUpdateTodos({...todo, title: e.target.value})}/>
-            <input
-                placeholder='Изменить описание'
-                value={updateTodos.body}
-                onChange={e => setUpdateTodos({...todo, body: e.target.value})}/>
+            <label>
+                Заголовок
+                <input
+                    placeholder='Изменить заголовок'
+                    value={updateTodos.title}
+                    onChange={e => setUpdateTodos({...todo, title: e.target.value})}/>
+            </label>
+            <label>
+                Описание
+                <input
+                    placeholder='Изменить описание'
+                    value={updateTodos.body}
+                    onChange={e => setUpdateTodos({...todo, body: e.target.value})}/>
+            </label>
+
             <div>
-                <MyButton onClick={updateTodo}>Подтвердить изменение</MyButton>
+                <MyButton style={{marginLeft: 'auto', marginTop: 5}} onClick={updateTodo}>Подтвердить изменение</MyButton>
             </div>
         </form>
     );

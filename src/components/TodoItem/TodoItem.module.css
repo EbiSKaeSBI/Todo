@@ -1,36 +1,61 @@
 .TodoItem {
     display: flex;
     justify-content: space-between;
-    border: 1px solid;
-    border-radius: 12px;
-    width: 100vh;
+    border-bottom: 1px  solid;
+    width: 100%;
     min-height: 50px;
-    padding: 10px;
+    padding: 30px;
 }
 
 .TodoItem__content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 2px
+}
+
+.TodoItem__content h3 {
+    font-size: 20px;
+}
+
+.TodoItem__content p {
+    font-size: 18px;
 }
 
 .TodoItem__checkbox {
     cursor: pointer;
 }
+.TodoItem__checkbox:hover{
+    opacity: 0.75;
+    color: #5E60D2;
+}
 
 .TodoItem__checkbox.active  {
-    color: green;
+    color: #5E60D2;
 }
+
+
 
 .EditIcon{
     cursor: pointer;
     display: flex;
-    justify-content: flex-end;
 }
+.EditIcon:hover{
+    color: #d2d060;
+}
+
 .TodoItem__Btn{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
+    align-items: center;
+    gap: 15px;
 
+}
+
+.TrashIcon{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.TrashIcon:hover{
+    color: #d26062;
 }

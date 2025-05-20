@@ -5,6 +5,7 @@ import {FaPen} from "react-icons/fa";
 import Modal from "../Modal/Modal.jsx";
 import TodoEditForm from "../TodoEditForm/TodoEditForm.jsx";
 import {SiTicktick} from "react-icons/si";
+import {FiTrash} from "react-icons/fi";
 
 
 function TodoItem(props) {
@@ -26,7 +27,7 @@ function TodoItem(props) {
     return (
         <div className={cl.TodoItem}>
             <div className={cl.TodoItem__content}>
-                <SiTicktick size={24} className={rootClassName.join(' ')} onClick={handleClick}/>
+
                 <h3 id={props.todo.id}>{props.todo.title}</h3>
                 <p>{props.todo.body}</p>
             </div>
@@ -34,8 +35,9 @@ function TodoItem(props) {
                 <Modal visible={modal} setVisible={setModal}>
                     <TodoEditForm todo={props.todo} setVisible={setModal}/>
                 </Modal>
-                <span className={cl.EditIcon} onClick={() => setModal(true)}><FaPen/></span>
-                <MyButton onClick={() => props.remove(props.todo)}>Удалить</MyButton>
+                <SiTicktick size={24} className={rootClassName.join(' ')} onClick={handleClick}/>
+                <span className={cl.EditIcon} onClick={() => setModal(true)}><FaPen size={20}/></span>
+                <FiTrash className={cl.TrashIcon} onClick={() => props.remove(props.todo)} size={25} />
             </div>
         </div>
     );

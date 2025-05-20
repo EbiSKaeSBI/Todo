@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import MyButton from "../UI/button/MyButton.jsx";
 import './TodoForm.css'
+import {IoCheckmarkOutline} from "react-icons/io5";
+
 
 function TodoForm({create}) {
 
@@ -16,17 +17,25 @@ function TodoForm({create}) {
     }
     return (
         <form className="TodoForm">
-            <input
-                placeholder='Введите заголовок'
-                value={todo.title}
-                onChange={e => setTodo({...todo, title: e.target.value})}/>
-            <input
-                placeholder='Введите описание'
-                value={todo.body}
-                onChange={e => setTodo({...todo, body: e.target.value})}/>
-            <div>
-                <MyButton onClick={addTodo}>Добавить задачу</MyButton>
-            </div>
+            <label>
+                Заголовок
+                <input
+                    placeholder='Введите заголовок'
+                    value={todo.title}
+                    onChange={e => setTodo({...todo, title: e.target.value})}
+                    id="title"
+                />
+            </label>
+            <label>
+                Описание
+                <input
+                    placeholder='Введите описание'
+                    value={todo.body}
+                    onChange={e => setTodo({...todo, body: e.target.value})}/>
+                <div className="TodoForm__btn">
+                    <span className="TodoForm__acsBtn"><IoCheckmarkOutline   size={35} onClick={addTodo} /></span>
+                </div>
+            </label>
         </form>
     );
 }
